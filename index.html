@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="zxx" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ahmed Safwat , Email:safwatahmed014@gmail.com , whatsApp : +201016532206">
+    <title>   بطاقه معايده </title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+    <body>
+      <img  style='position: absolute;
+      z-index: -3;
+      top: -100px;
+      left: -100px;
+      opacity: 0;
+      width:0' id="private">
+      <!-- <div class="container-fluid  final d-none mt-5">
+        <div class="text-center">
+          <canvas id="idCanvas" width="1080" height="1920" style="padding:0;font-family: myfont;" dir="rtl"> </canvas>
+                          <div class="down" onclick="download()">
+                          تحميل بطاقه الاهداء
+                          </div>
+        </div>
+      </div>
+      <div class="font" style="font-family: font;">&ThinSpace;</div> -->
+     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    ---------------------------------------------Start log section   ------------------------------------------
+    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+      <div class="log log1">
+        <div class="container">
+          <img src="logo.jpg" alt="#" class="logo w-25px">
+          <img src="logo2.jpg" alt="#" class="logo w-25px">
+          <h1 class="title">
+
+            تعال نهنّي أحبابك بعيد الفطر المبارك 🌙✨
+نبي نصمم معاك بطاقة عيدية باسمك ترسلها لأحبابك وتشاركهم فرحة العيد 🎉🤍
+<BR> 
+كل اللي عليك تضغط هنا وتضيف اسمك
+<BR> 
+ولا تنسَ
+<BR> 
+العيد فرحة وبهجة، خلينا ننشر السعادة مع الجميع 🕌💛
+    
+          </h1>
+          <div class="dis">
+            <div class="row">
+              <div class="col-6">
+                <div class="content content5" data-value="1.jpg">
+                  <div class="img">
+                    <img src="1.jpg" alt="#" class="w-100">
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+               <div class="content content5" data-value="2.jpg">
+                 <div class="img">
+                   <img src="2.jpg" alt="#" class="w-100">
+                 </div>
+               </div>
+             </div>
+            <!-- <div>
+              <form enctype="multipart/form-data" method="POST" action="card.php">
+                  <div class="form-group  text-center">
+                    <div class="col-sm-12 text-center">
+                      <input type="text" name="name" class="form-control text-center name mt-3" required placeholder="أدخل الأسم هنا">
+                      <input type="text" name="job" class="form-control text-center job mt-2" required placeholder="أدخل المسمى الوظيفي هنا">
+                      <input type="hidden" name="img" class="form-control text-center mt-2"  value="image.jpg">
+                    </div>
+                  </div>
+                <input   value="معاينة البطاقة" style="cursor:pointer" class="btn btn-primary" onclick="make()">
+              </form>
+            </div> -->
+        </div>
+        </div>
+       </div>
+      </div>
+      <div class="log log2 d-none">
+        <div class="container">
+          <img src="logo.jpg" alt="#" class="logo w-25px">
+          <img src="logo2.jpg" alt="#" class="logo w-25px">
+            <h1 class="title">     من فضلك قم بكتابة الاسم  </h1>
+          <div class="dis" style=" display: flex;align-items: center;justify-content: center;">
+              <div class="content content2">
+                <!-- <form enctype="multipart/form-data" method="POST" action="card.php"> -->
+                    <div class="form-group row">
+                      <div class="col-sm-12">
+                        <input type="text" name="name" id="name" class="form-control  text-center" required >
+                        <input type="hidden" class="img" name="img" >
+                      </div>
+                    </div>
+	          			<input type="submit" onclick="GenerateImage()" name="submit"  value="معاينة البطاقة" style="cursor:pointer" class="btn btn-primary">
+                <!-- </form> -->
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 999999;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="text-align:center;">
+                    <h5 class="modal-title" id="exampleModalLabel">بطاقة المعايده</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <canvas id="idCanvas"  style="padding:0" > </canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="Download()" class="btn btn-primary" style="width: 100%;">تحميل</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    ---------------------------------------------End log section ------------------------------------------
+    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+    $(".log .content5 ").on({
+        click:function(){
+            $value = $(this).data("value")
+            $("input.img").val($value)
+            $('#private').attr('src',$value)
+            sessionStorage.setItem("img", $value);
+            $(".log1").animate({
+                left:"100vw"
+            },1000,function(){
+                $(".log1").addClass("d-none")
+                $(".log2").removeClass("d-none")
+                $(".log2").animate({
+                    right:"0"
+                },1000)
+            })
+        }
+    })
+});
+var canvas = document.getElementById('idCanvas');
+                        var context = canvas.getContext('2d');
+                        var link = document.createElement('link');
+function GenerateImage() {
+                      var name = $('#name').val();
+                      var canvas = document.getElementById('idCanvas');
+
+                        link.rel = 'stylesheet';
+                        link.type = 'text/css';
+                        link.href = 'https://fonts.googleapis.com/css2?family=Cairo&display=swap';
+                        document.getElementsByTagName('head')[0].appendChild(link);
+                        var imageObj = new Image();
+                        imageObj.src = sessionStorage.getItem("img"); ;
+                        if ( sessionStorage.getItem("img") == '1.jpg' ){
+                          canvas.width = 900;
+                          canvas.height = 1600;
+                          context.drawImage(imageObj, 0, 0,900,1600);
+                          context.font = "bolder 40px 'Cairo'";
+                          context.textAlign = 'center'; 
+                          context.fillStyle  = '#f1bd2e';
+                          context.fillText(name, canvas.width/2, 1395);
+                        }
+                        if ( sessionStorage.getItem("img") == '2.jpg'  ){
+                          canvas.width = 911;
+                          canvas.height = 1600;
+                          context.drawImage(imageObj, 0, 0,911,1600);
+                          context.font = "bolder 40px 'Cairo'";
+                          context.textAlign = 'center'; 
+                          context.fillStyle  = '#a264ba';
+                          context.fillText(name, canvas.width/2 + 5, 1285 );
+                        }
+                    
+                      
+          $('#exampleModal').modal("show");
+      }
+
+
+      function Download() {
+
+          var canvas = document.getElementById('idCanvas');
+          var link = document.createElement('a');
+          var dataURL = canvas.toDataURL();
+          link.download = "my-image.jpeg";
+          link.href = dataURL;
+          //alert(link.href);
+          link.click();
+      }
+      </script>
+</body>
+</html>
